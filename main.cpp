@@ -1,5 +1,4 @@
 #include "RSA.h"
-//#include "../../Funciones/Funciones.h"
 
 using namespace std;
 

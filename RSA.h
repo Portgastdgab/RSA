@@ -21,9 +21,6 @@ public:
 
     RSA(int, int);
 
-//    virtual ~RSA(void);
-//    int resto_chino(int);
-
     void chiper(string);        //convierte cada letra del mensaje en (su posicion^e)mod N
 
     void dechiper(vector<int>); //convierte cada numero del vector en (numero^d)mod N
