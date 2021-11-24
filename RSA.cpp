@@ -8,6 +8,8 @@ RSA::RSA(int bits) {
     // a la variable p y q les sumo 123 y 321 al tamaño de el vector prime_bits, consigo un numero random en el intevalo
     // y le saco el modulo para q el valor este entre 0 y el tamaño de prime_bits
     p = random_prime[module(random(123, 123 + random_prime.size()), random_prime.size() - 1)];
+    //p = 3;
+    //q = 11;
     q = random_prime[module(random(321, 321 + random_prime.size()), random_prime.size() - 1)];
     e = random_prime[random(0, random_prime.size() - 1)];
 
@@ -29,23 +31,18 @@ RSA::RSA(int a, int b) {
     N = b;
 }
 
-void RSA::chiper(string mssg) {
-    for (int i = 0; i < mssg.size(); ++i) {
-        encrypted_letter.push_back(modular_exponentiation(alfabeto.find(mssg[i]), e, N));
-    }
+void RSA::chiper(int mssg) {
+    encrypted_letter = modular_exponentiation(mssg, e, N);
 }
 
-void RSA::dechiper(vector<int> letters) {
-    for (int i = 0; i < letters.size(); ++i) {
-        message.push_back(alfabeto[modular_exponentiation(letters[i], d, N)]);
-    }
+void RSA::dechiper(int letters) {
+    message = modular_exponentiation(letters, d, N);
 }
 
 void RSA::show_encryption() {
     cout << endl << "Mensaje cifrado: ";
-    for (int i = 0; i < encrypted_letter.size(); ++i) {
-        cout << encrypted_letter[i];
-    }
+    cout << encrypted_letter;
+
 }
 
 void RSA::show_decryption() {

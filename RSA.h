@@ -9,21 +9,21 @@ private:
     int p;
     int q;
     int oN;
-    string alfabeto = "abcdefghijklmnopqrstuvwxyz ";
+    //string alfabeto = "abcdefghijklmnopqrstuvwxyz ";
 
 public:
     int e;
     int N;
-    string message;
-    vector<int> encrypted_letter;
+    int message;
+    int encrypted_letter;
 
     RSA(int);
 
     RSA(int, int);
 
-    void chiper(string);        //convierte cada letra del mensaje en (su posicion^e)mod N
+    void chiper(int);        //convierte cada letra del mensaje en (su posicion^e)mod N
 
-    void dechiper(vector<int>); //convierte cada numero del vector en (numero^d)mod N
+    void dechiper(int); //convierte cada numero del vector en (numero^d)mod N
 
     void show_encryption();     //imprime cada valor del vector encrypted_letter de quien cifro el mensaje
 
