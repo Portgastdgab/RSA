@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1637770565 source:d:\gabriel\programming projects\codeblocks projects\rsa\main.cpp
+	"RSA.h"
+
+1637771762 d:\gabriel\programming projects\codeblocks projects\rsa\rsa.h
+	<iostream>
+	"Funciones.h"
+
+1637771762 d:\gabriel\programming projects\codeblocks projects\rsa\funciones.h
+	<stdlib.h>
+	<iostream>
+	<time.h>
+	<vector>
+	<cmath>
+
